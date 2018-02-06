@@ -3,10 +3,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 public class cine {
-	private Scanner teclado;
+	private Scanner miteclado;
 	private ArrayList<Persona>cola;
 	public cine(){
-		teclado=new Scanner(System.in);
+		miteclado=new Scanner(System.in);
 		cola=new ArrayList<Persona>();
 	}
 	public void crearCola(){
@@ -14,7 +14,7 @@ public class cine {
 		System.out.println("Numero de personas:"+numPersonas);
 		for(int i=0;i<numPersonas;i++){
 			System.out.print("Nombre:");
-			String nom=teclado.nextLine();
+			String nom=miteclado.nextLine();
 			int edad=(int)Math.random()*55+5;
 			Persona p=new Persona(nom,edad);
 			cola.add(p);
